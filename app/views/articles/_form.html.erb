@@ -16,13 +16,17 @@
   <% end %>
 
   <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title, class: 'ui input' %>
+    <div class='ui input fluid'>
+      <%= f.text_field :title, placeholder: 'Title' %>
+    </div>
   </p>
 
   <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text, class: 'ui input' %>
+    <div class='ui form'>
+      <div class='field'>
+        <%= f.text_area :text, placeholder: 'Text' %>
+      </div>
+    </div>
   </p>
 
   <p>
