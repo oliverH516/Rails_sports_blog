@@ -1,0 +1,31 @@
+<style>
+  body {
+    background-color: snow;
+  }
+.centered {
+  text-align: justify;
+}
+
+
+
+</style>
+<h1 class="ui header">
+  <div class="centered">
+    Edit <i class="edit icon"></i>
+  </div>
+  <hr>
+</h1>
+
+
+<%= render 'form' %>
+
+<div class="ui hidden divider"></div>
+
+<div class="ui vertical animated inverted red button">
+  <div class="visible content">
+    <i class="pointing left icon"></i>
+  </div>
+  <div class="hidden content">
+    <%= link_to 'Back', articles_path %>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<style>
+  body {
+    background-color: snow;
+  }
+  .centered {
+    text-align: center;
+  }
+
+</style>
+<h1 class="ui header">
+  <div class="centered">
+    <i class="find icon"></i> <%= @article.title %>
+  </div>
+  <hr>
+  <div class="sub header"><%= @article.text %></div>
+</h1>
+
+<h2>Comments</h2>
+
+<%= render @article.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+<div class="ui hidden divider"></div>
+
+  <div class="ui animated fade inverted red button">
+    <div class="visible content">
+      <i class="pointing left icon"></i>
+    </div>
+
+    <div class="hidden content">
+        <%= link_to 'Back', articles_path %>
+    </div>
+  </div>
+
+  <div class="ui animated fade inverted green button">
+    <div class="visible content">
+      <i class="edit icon"></i>
+    </div>
+
+    <div class="hidden content">
+      <%= link_to 'Edit', edit_article_path(@article) %>
+    </div>
+  </div>

@@ -1,0 +1,32 @@
+<style>
+
+body {
+  background-color: tan;
+
+  color: darkred;
+}
+
+
+
+
+</style>
+
+<h1 class="ui header">
+  <div class="centered">
+    New article
+  </div>
+  <hr>
+</h1>
+
+<%= render 'form' %>
+
+<div  class="ui hidden divider"></div>
+
+<div class="ui vertical animated button" tabindex="0">
+  <div class="visible content">
+    <i class="pointing left icon"></i>
+  </div>
+  <div class="hidden content">
+    <%= link_to 'Back', articles_path %>
+  </div>
+</div>
