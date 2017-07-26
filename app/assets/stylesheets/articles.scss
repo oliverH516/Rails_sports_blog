@@ -1,0 +1,27 @@
+.articles.new {
+  background-color: tan;
+  color: darkred;
+}
+
+.articles.index  {
+  background-color:  linen;
+
+  a {
+    color: black;
+
+  }
+
+  .buttons .button {
+
+    background-color: #A5D2F2;
+  }
+
+}
+
+.articles.show, .articles.edit {
+    background-color: snow;
+
+    .centered {
+      text-align: center;
+    }
+}

@@ -1,16 +1,3 @@
-<style>
-
-body {
-  background-color: tan;
-
-  color: darkred;
-}
-
-
-
-
-</style>
-
 <h1 class="ui header">
   <div class="centered">
     New article
@@ -22,11 +9,11 @@ body {
 
 <div  class="ui hidden divider"></div>
 
-<div class="ui vertical animated button" tabindex="0">
+<%= link_to articles_path, class: 'ui vertical animated inverted red button' do %>
   <div class="visible content">
     <i class="pointing left icon"></i>
   </div>
   <div class="hidden content">
-    <%= link_to 'Back', articles_path %>
+    Back
   </div>
-</div>
+<% end %>

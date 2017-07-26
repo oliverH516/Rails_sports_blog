@@ -1,22 +1,3 @@
-<style>
-a {
-  color: black;
-
-}
-
-.buttons .button {
-
-  background-color: #A5D2F2;
-}
-
-body {
-  background-color:  linen;
-}
-
-
-</style>
-
-
 <h1 class= "ui header">
   <i class="spy icon"></i>
   <div class="content">
@@ -24,10 +5,10 @@ body {
   </div>
 </h1>
 
-<button class="fluid ui inverted blue button">
+<%= link_to new_article_path, class: 'fluid ui inverted blue button' do %>
   <i class="plus icon"></i>
-<%= link_to 'New article', new_article_path %>
-</button>
+  New article
+<% end %>
 
 <table class="ui blue table">
   <thead>
@@ -45,37 +26,38 @@ body {
         <td><%= article.text %></td>
         <td>
           <div class="ui inverted compact buttons">
-            <button class="ui button">
+            <%= link_to article_path(article), class: 'ui button' do %>
               <div class="ui animated fade button">
                 <div class="hidden content">
-                  <%= link_to 'Show', article_path(article) %>
+                  Show
                 </div>
                 <div class="visible content">
                   <i class="find icon"></i>
                 </div>
               </div>
-            </button>
-            <button class="ui  button">
+            <% end %>
+
+            <%= link_to edit_article_path(article), class: 'ui button' do %>
               <div class="ui animated fade button">
                 <div class="hidden content">
-                  <%= link_to 'Edit', edit_article_path(article) %>
+                  Edit
                 </div>
                 <div class="visible content">
                   <i class="edit icon"></i>
                 </div>
               </div>
-            </button>
-            <button class="ui button">
+            <% end %>
+
+            <%= link_to article_path(article), class: 'ui button', method: :delete, data: { confirm: 'Error!!!' } do %>
               <div class="ui animated fade button">
                 <div class="hidden content">
-                  <%= link_to 'Destroy', article_path(article),
-                    method: :delete,
-                    data: { confirm: 'Error!!!' } %>
+                  Destroy
                 </div>
                 <div class="visible content">
                   <i class="trash icon"></i>
                 </div>
-            </button>
+              </div>
+            <% end %>
           </div>
         </td>
       </tr>
